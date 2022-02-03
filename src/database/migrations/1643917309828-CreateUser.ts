@@ -12,6 +12,7 @@ export class CreateUser1643741982412 implements MigrationInterface {
                         isPrimary: true,
                         isUnique: true,
                         isGenerated: true,
+                        generationStrategy: "increment",
                     },
                     {
                         name: "nome",
@@ -28,6 +29,6 @@ export class CreateUser1643741982412 implements MigrationInterface {
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
-        queryRunner.dropTable("categories");
+        queryRunner.dropTable("users");
     }
 }

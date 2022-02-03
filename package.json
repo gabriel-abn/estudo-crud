@@ -4,16 +4,19 @@
     "main": "index.js",
     "license": "MIT",
     "dependencies": {
+        "@types/uuid": "^8.3.4",
         "express": "^4.17.2",
         "mysql": "^2.18.1",
         "reflect-metadata": "^0.1.13",
-        "typeorm": "^0.2.41"
+        "typeorm": "^0.2.41",
+        "uuid": "^8.3.2"
     },
     "scripts": {
         "dev": "ts-node-dev --transpile-only src/server.ts",
         "typorm": "ts-node-dev --transpile-only ./node_modules/typeorm/cli.js",
         "typeorm:run-migration": "ts-node-dev --transpile-only ./node_modules/typeorm/cli.js migration:run",
-        "typeorm:create-migration": "ts-node-dev --transpile-only ./node_modules/typeorm/cli.js migration:create"
+        "typeorm:create-migration": "ts-node-dev --transpile-only ./node_modules/typeorm/cli.js migration:create",
+        "typeorm:revert-migration": "ts-node-dev --transpile-only ./node_modules/typeorm/cli.js migration:revert"
     },
     "devDependencies": {
         "@types/express": "^4.17.13",
